@@ -90,8 +90,7 @@ function App() {
           <Route path="/users">
           <ContextProvider><AddStudents/></ContextProvider>
           </Route>
-          <Route path="/evalute">
-          
+          <Route path="/evalute">   
           <ContextProvider><Evalution/></ContextProvider>
           </Route>
           
@@ -100,10 +99,6 @@ function App() {
     </Router>
   );
 }
-
-// function joined(){
-//   return 
-// }
 
 
 export default App;
