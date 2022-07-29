@@ -3,7 +3,15 @@ import { Drawer, JoinedClasses, Login, Main } from "./components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { IsUserRedirect, ProtectedRoute } from "./routes/Routes";
 import { useLocalContext } from "./context/context";
+import { ContextProvider } from "./context/context";
+import Attendence from "./components/attendence/Attendence";
 import db from "./lib/firebase";
+
+import AddStudents from "./components/Add-students/AddStudents";
+import Viva from "./components/Viva/Viva";
+import Evalution from "./components/Evaluation/Evalution";
+
+
 function App() {
   const { loggedInMail } = useLocalContext();
 
@@ -72,9 +80,30 @@ function App() {
             ))}
           </ol>
         </ProtectedRoute>
+        <Switch>
+        <Route path="/viva">
+          <ContextProvider><Viva/></ContextProvider>
+          </Route>
+          <Route path="/attendence">
+          <ContextProvider><Attendence/></ContextProvider>
+          </Route>
+          <Route path="/users">
+          <ContextProvider><AddStudents/></ContextProvider>
+          </Route>
+          <Route path="/evalute">
+          
+          <ContextProvider><Evalution/></ContextProvider>
+          </Route>
+          
+        </Switch>
       </Switch>
     </Router>
   );
 }
+
+// function joined(){
+//   return 
+// }
+
 
 export default App;
