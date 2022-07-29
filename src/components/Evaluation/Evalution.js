@@ -3,6 +3,7 @@ import contacts from "../attendence/contacts";
 import { Link } from "react-router-dom";
 import Print from "./Print";
 import Evalute from "./Evalute";
+import { Drawer } from "@material-ui/core";
 
 function CreateTable(contacts){
     return <Evalute
@@ -17,7 +18,7 @@ function CreateTable(contacts){
 
 function Evalution(){
     return  <div>
-    
+    <Drawer/>
   
   
     <h1 className="heading">Attendence of the Students of AIADS</h1>

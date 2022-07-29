@@ -4,7 +4,7 @@ import Input from "../input/input";
 import index from "./index.css";
 function AddStudents(){
     return <div>
-    
+    <Drawer/>
     <form className="form">
         
         <Input

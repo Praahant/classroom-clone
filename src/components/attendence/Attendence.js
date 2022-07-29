@@ -8,6 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { ContextProvider } from "../../context/context";
 
 const date = new Date();
 var today="Take attendence of "+date.getDate()+"/"+date.getMonth()+"/"+date.getFullYear();
@@ -25,6 +26,8 @@ function createCard(contacts){
 
 function Attendence(){
 return(
+  <ContextProvider>
+  <Drawer/>
   <form>
   
   
@@ -46,6 +49,8 @@ return(
   <Link to="/users"> <button id="Navigate" type="navigate">Add-Students</button></Link>
   <button id="Attendence-submit" type="submit">Submit</button>
   </form>
+  </ContextProvider>
+
 )
 }
 
